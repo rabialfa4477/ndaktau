@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>still there's nothing in here but....</h1>
+    <button id="showVideoButton" onclick="showVideo()">Click here</button>
+    <video id="myVideo" src="Images/frog.mp4" style="display: none;"></video>
+    <h1 id="jokeTitle" style="display: none;">just kidding honestly i only want to say</h1>
+    <p id="jokeText" style="display: none;">if there's someone made you laugh with a joke it must be me :>,
+        and if there's a lot of smile on your face it must be you laughed because of my joke,
+        and if there's no one to make you smile and laugh anymore, probably I already died.... huhuhu :"">
+        <br> i want to see your smile all days huhuhu :>
+    </p>
+    <audio id="myAudio" style="display: none;" src="Images/mixue.mp3" controls ></audio>
+
+
+
+</body>
+<script>
+    function showVideo() {
+  var video = document.getElementById("myVideo");
+  var jokeTitle = document.getElementById("jokeTitle");
+  var jokeText = document.getElementById("jokeText");
+  var myAudio = document.getElementById("myAudio");
+
+  video.style.display = "block";
+  video.play();
+
+  video.addEventListener("ended", function() {
+    video.style.display = "none";
+    jokeTitle.style.display = "block";
+    jokeText.style.display = "block";
+    myAudio.play();
+  });
+}
+
+
+</script>
+<style>
+    video{
+        width: 50%;
+        left: 50%;
+        right: 50%;
+    }
+</style>
+</html>
